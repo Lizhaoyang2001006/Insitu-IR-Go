@@ -126,7 +126,7 @@
 * **分峰拟合优度 $R^2_{\text{fit}}$ 与拟合残差均方根误差 $\operatorname{RMSE}_{\text{fit}}$**：
   定义逐点拟合残差 $\varepsilon_j(\nu_i) = S_{j,\text{clean}}(\nu_i) - \hat{S}_j(\nu_i)$：
   $$R^2_{\text{fit},j} = 1 - \frac{\sum_{\nu_i \in \Omega_{\text{fit}}} \varepsilon_j(\nu_i)^2}{\sum_{\nu_i \in \Omega_{\text{fit}}} \left(S_{j,\text{clean}}(\nu_i) - \overline{S_{j,\text{clean}}}\right)^2}, \qquad \operatorname{RMSE}_{\text{fit},j} = \sqrt{\frac{1}{|\Omega_{\text{fit}}|} \sum_{\nu_i \in \Omega_{\text{fit}}} \varepsilon_j(\nu_i)^2}$$
-  脚本自动生成对齐恒温终点时刻的分峰重构与底部残差验证图 `Fig_SI_Step3_Deconvolution_Verification.png/.pdf`。
+  脚本自动生成对齐恒温终点时刻的分峰重构与底部残差验证图 `Fig_SI_Step3_Deconvolution_Verification.png/.pdf`，并将**所有数据集内每一条光谱**的逐波数 13 列分峰曲线（实验谱、总拟合谱、残差、平直偏移 $\hat{c}_0$、扣偏移实验/总和谱及 6 条独立高斯子峰曲线）完整导出至 `output/step2_3/decon_curves/`（详见 [`验收单.md`](./验收单.md)）。
 
 #### 指标 2（零参数实测峰顶敏感性比值，`r1590`）与指标 3（传统文献峰位比值，`r1600`）
 定义以波数 $\nu_0$ 为中心、半宽 $h = 2.0\text{ cm}^{-1}$（即 $[\nu_0 - 2.0,\, \nu_0 + 2.0]\text{ cm}^{-1}$）的窄带算术平均吸光度：

@@ -5,7 +5,8 @@
 
 面向 $\text{CO}_2$–胺液（MEA）程序升温与恒温解吸原位红外（In-Situ FTIR）光谱分析的通用、路径中立、样品无关自动化处理管线。仓库完整开源数据质控、基线校准、气相水汽正交投影去噪、共享物理基底多峰去卷积与动力学线性回归算法（**不包含任何实验原始数据或实验图谱**）。
 
-> 📘 **完整数学模型推导、算法细节与代码映射表**请查阅：[**`INSITU_FTIR_HANDOFF_GUIDE.md`**](./INSITU_FTIR_HANDOFF_GUIDE.md)。
+> 📘 **完整数学模型推导、算法细节与代码映射表**请查阅：[**`INSITU_FTIR_HANDOFF_GUIDE.md`**](./INSITU_FTIR_HANDOFF_GUIDE.md)。  
+> 📋 **Origin / Python 作图数据文件与列号一一对应指南**请查阅：[**`验收单.md`**](./验收单.md)。
 
 ---
 
@@ -75,10 +76,11 @@ python3 scripts/step4_isothermal_fig4_template.py --in-dir ./output/step2_3 --ou
 ├── .gitignore                                # 严格排除 raw_data/、output/ 及所有数据/图像文件
 ├── README.md                                 # 管线架构、数学模型概要与快速开始
 ├── INSITU_FTIR_HANDOFF_GUIDE.md              # 完整数学推导、代码逐项映射表与方法规范
+├── 验收单.md                                  # 全部输出 CSV 与论文/SI 作图选列一一对应验收指南
 ├── requirements.txt                          # Python 依赖包清单
 ├── run_pipeline.py                           # 一键全流程运行入口 (Step 0 -> Step 4)
 └── scripts/
     ├── step1A_baseline_truncate.py           # Step 0 四重质控门禁 + Step 1A 截断与中位基线归零
-    ├── step2_step3_wvclean_and_ratios.py     # Step 2 相关门控扣水汽 + Step 3 共享基去卷积与三指标定量
+    ├── step2_step3_wvclean_and_ratios.py     # Step 2 相关门控扣水汽 + Step 3 逐帧去卷积曲线导出与三指标定量
     └── step4_isothermal_fig4_template.py     # Step 4 二维差谱热图、OLS 速率回归与 Origin 矩阵导出
 ```
