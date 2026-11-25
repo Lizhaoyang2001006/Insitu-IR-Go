@@ -1,0 +1,33 @@
+# Python & environment
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+ENV/
+.mplconfig/
+
+# Strictly exclude all experimental raw data, processed tables, and data plots
+raw_data/
+output/
+step1A_out/
+step2_3_out/
+step4_out/
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.png
+*.pdf
+*.jpg
+*.jpeg
+*.svg
+*.tif
+*.tiff
+_转换说明.txt
+
+# OS metadata
+.DS_Store
+Thumbs.db
+~$*
